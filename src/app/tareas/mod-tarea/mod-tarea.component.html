@@ -1,0 +1,13 @@
+
+<div class="incontainer">
+    <input type="text" class="form-control" ngModel name="name" placeholder="Nombre de la tarea">
+    <br>
+    <textarea cols="30" rows="10" class="form-control" ngModel name="description" placeholder="Descripción"></textarea>
+    <br>
+    <select class="form-control" NgModel name="mode" id="">
+      <option value="">Elige la visibilidad</option>
+      <option value="visible">Visible</option>
+      <option value="invisible">Invisible</option>
+    </select>
+    <button ng-click="createTask()" class="btn btn-primary">Modificar Tarea</button>
+</div>
