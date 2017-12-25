@@ -1,0 +1,38 @@
+.contenedor {
+    display: table;
+    height: 30em;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.contenedor-personas {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    border: solid 1px black;
+}
+
+.persona {
+    display: -ms-flexbox;
+    display: inline-flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 20%;
+    margin: 2%;
+    border: solid 1px yellow;
+}
+
+.imagen {
+    width: 100%;
+    text-align: center;
+    flex: 9;
+    border: solid 1px blue;
+}
+
+.das {
+    text-align: center;
+    width: 100%;
+    flex: 1;
+    border: solid 1px green;
+    background-color: aqua;
+}
