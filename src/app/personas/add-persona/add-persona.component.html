@@ -9,7 +9,6 @@
         
         <div class="form-group">
           <label>DAS</label>
-          <label>C.I.F.</label>
            <i class="fa fa-check-circle check" 
                *ngIf="das.valid"></i>
           <i class="fa fa-exclamation-circle uncheck"
@@ -44,7 +43,6 @@
         </div>
         <div class="form-group">
           <label>Apellido</label>
-          <label>Dirección</label>
 
            <i class="fa fa-check-circle check" 
                *ngIf="apellido.valid"></i>
@@ -63,7 +61,6 @@
         </div>
         <div class="form-group">
           <label>Status (con acceso/sin acceso)</label>
-          <label>Código Postal</label>
            <i class="fa fa-check-circle check" 
                *ngIf="cp.valid"></i>
           <i class="fa fa-exclamation-circle uncheck"
@@ -81,7 +78,6 @@
         </div>
         <div class="form-group">
           <label>Password</label>
-          <label>Localidad</label>
            <i class="fa fa-check-circle check" 
                *ngIf="password.valid"></i>
           <i class="fa fa-exclamation-circle uncheck"
@@ -97,28 +93,7 @@
             El campo password es obligatorio.
           </p>
         </div>
-       <!-- <div class="form-group">
-          <label for="provincia">Provincia</label>
-           <i class="fa fa-check-circle check" 
-               *ngIf="provincia.valid"></i>
-          <i class="fa fa-exclamation-circle uncheck"
-               *ngIf="provincia.invalid && provincia.touched"></i> 
-          <select class="form-control" 
-                  id="provincia"
-                  ngModel
-                  name="provincia"
-                  required
-                  #provincia="ngModel">
-                  <option value="">Seleccione la provincia</option> 
-                  <option *ngFor="let provincia of provincias"
-                  [value]="provincia">{{provincia}} </option> 
-          </select>
-          <p class="alert alert-danger" *ngIf="provincia.invalid && provincia.touched">
-            El campo Provincia es obligatorio.
-          </p>
-        </div> 
-      -->
-        
+      
         
       <button type="submit" 
               class="btn btn-success"
@@ -127,14 +102,7 @@
       <p class="alert alert-danger " *ngIf="!formpro.valid">
         Por favor complete todos los campos
       </p> 
-      <!--
-    <hr>
-      <pre> Estado Dirty: {{ formpro.controls.email.dirty }}</pre>
-      <pre> Estado Pristine: {{ formpro.controls.email.pristine }}</pre>
-      <pre> Estado Touched: {{ formpro.controls.email.touched }}</pre>
-      <pre> Estado Valid: {{ formpro.controls.email.valid }}</pre>
-      <pre> Estado Invalid: {{ formpro.controls.email.invalid }}</pre>
-      -->
+     
     </form>
   </div>
 </div>
