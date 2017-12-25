@@ -19,6 +19,7 @@ import { ModTareaComponent } from './tareas/mod-tarea/mod-tarea.component';
 import { DelPersonaComponent } from './personas/del-persona/del-persona.component';
 import { ModPersonaComponent } from './personas/mod-persona/mod-persona.component';
 import { ErrorComponent } from './error/error.component';
+import { GlobalNavBarComponent } from './global-nav-bar/global-nav-bar.component';
 
 
 const routes: Routes = [
@@ -51,7 +52,8 @@ const routes: Routes = [
     ModTareaComponent,
     DelPersonaComponent,
     ModPersonaComponent,
-    ErrorComponent
+    ErrorComponent,
+    GlobalNavBarComponent
   ],
   imports: [
     BrowserModule,
