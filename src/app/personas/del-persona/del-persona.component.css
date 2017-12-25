@@ -1,6 +1,6 @@
 .contenedor {
     display: table;
-    height: -webkit-fill-available;
+    height: 30em;
     width: 100%;
     overflow-y: scroll;
 }
@@ -34,4 +34,5 @@
     width: 100%;
     flex: 1;
     border: solid 1px green;
+    background-color: aqua;
 }
