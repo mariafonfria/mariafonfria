@@ -1,11 +1,7 @@
-
-
-  
-  
   <div class="row">
   <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset 2">    
     <h2>Añadir una nueva Persona</h2>
-    <form (ngSubmit)="onSubmit()" #formpro="ngForm">
+    <form (ngSubmit)="onSubmit()" #formpro="ngForm" [formGroup]="personasForm">
         
         <div class="form-group">
           <label>DAS</label>
@@ -20,7 +16,8 @@
                  name="das"
                  ngModel
                  required
-                 #das="ngModel">
+                 #das="ngModel"
+                 formControlName="das">
           <p class="alert alert-danger" *ngIf="das.invalid && das.touched">
             El campo DAS es obligatorio.
           </p>
@@ -37,7 +34,8 @@
                  name="nombre"
                  ngModel
                  required
-                 #nombre="ngModel">
+                 #nombre="ngModel"
+                 formControlName="nombre">
           <p class="alert alert-danger" *ngIf="nombre.invalid && nombre.touched">
             El campo nombre es obligatorio.
           </p>
@@ -56,7 +54,8 @@
                  name="apellido"
                  ngModel
                  required
-                 #apellido="ngModel">
+                 #apellido="ngModel"
+                 formControlName="apellido">
           <p class="alert alert-danger" *ngIf="apellido.invalid && apellido.touched">
             El campo Apellido es obligatorio.
           </p>
@@ -74,7 +73,8 @@
                  name="cp"
                  ngModel
                  required
-                 #cp="ngModel">
+                 #cp="ngModel"
+                 formControlName="cp">
           <p class="alert alert-danger" *ngIf="cp.invalid && cp.touched">
             El campo Código Postal es obligatorio.
           </p>
@@ -92,7 +92,8 @@
                  name="password"
                  ngModel
                  required
-                 #password="ngModel">
+                 #password="ngModel"
+                 formControlName="password">
           <p class="alert alert-danger" *ngIf="password.invalid && password.touched">
             El campo password es obligatorio.
           </p>
@@ -136,6 +137,12 @@
       <pre> Estado Invalid: {{ formpro.controls.email.invalid }}</pre>
       -->
     </form>
+    <pre>
+      Valor del formulario : {{ personasForm.value | json}}
+    </pre>
+    <pre>
+      Estado del formulario : {{ personasForm.status | json}}
+    </pre>
   </div>
 </div>
 
