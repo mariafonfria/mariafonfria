@@ -1,100 +1,84 @@
   <div class="row">
   <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset 2">    
     <h2>Añadir una nueva Persona</h2>
-    <form (ngSubmit)="onSubmit()" #formpro="ngForm" [formGroup]="personasForm">
+    <form  [formGroup]="personasForm">
         
         <div class="form-group">
-          <label>DAS</label>
+          <label for="das">DAS</label>
           <label>C.I.F.</label>
            <i class="fa fa-check-circle check" 
-               *ngIf="das.valid"></i>
+               ></i>
           <i class="fa fa-exclamation-circle uncheck"
-               *ngIf="das.invalid && das.touched"></i>
+               ></i>
           <input type="text" 
                  class="form-control"
                  id="das"
-                 name="das"
-                 ngModel
-                 required
-                 #das="ngModel"
-                 formControlName="das">
-          <p class="alert alert-danger" *ngIf="das.invalid && das.touched">
+                 name="das"                 
+                formControlName="das">
+          <p class="alert alert-danger" >
             El campo DAS es obligatorio.
           </p>
         </div>
         <div class="form-group">  
-          <label>Nombre</label>
+          <label for="nombre">Nombre</label>
           <i class="fa fa-check-circle check" 
-               *ngIf="nombre.valid"></i>
+               ></i>
           <i class="fa fa-exclamation-circle uncheck"
-               *ngIf="nombre.invalid && nombre.touched"></i>
+               ></i>
           <input type="text" 
                  class="form-control"
                  id="nombre"
-                 name="nombre"
-                 ngModel
-                 required
-                 #nombre="ngModel"
+                 name="nombre"                 
                  formControlName="nombre">
-          <p class="alert alert-danger" *ngIf="nombre.invalid && nombre.touched">
+          <p class="alert alert-danger" >
             El campo nombre es obligatorio.
           </p>
         </div>
         <div class="form-group">
-          <label>Apellido</label>
+          <label for="apellido">Apellido</label>
           <label>Dirección</label>
 
            <i class="fa fa-check-circle check" 
-               *ngIf="apellido.valid"></i>
-          <i class="fa fa-exclamation-circle uncheck"
-               *ngIf="apellido.invalid && apellido.touched"></i>
+              ></i>
+          <i class="fa fa-exclamation-circle uncheck"></i>
           <input type="text" 
                  class="form-control"
                  id="apellido"
-                 name="apellido"
-                 ngModel
-                 required
-                 #apellido="ngModel"
+                 name="apellido"                 
                  formControlName="apellido">
-          <p class="alert alert-danger" *ngIf="apellido.invalid && apellido.touched">
+          <p class="alert alert-danger" >
             El campo Apellido es obligatorio.
           </p>
         </div>
         <div class="form-group">
           <label>Status (con acceso/sin acceso)</label>
-          <label>Código Postal</label>
+          <label for="cp">Código Postal</label>
            <i class="fa fa-check-circle check" 
-               *ngIf="cp.valid"></i>
+               ></i>
           <i class="fa fa-exclamation-circle uncheck"
-               *ngIf="cp.invalid && cp.touched"></i>
+               ></i>
           <input type="text" 
                  class="form-control"
                  id="cp"
-                 name="cp"
-                 ngModel
-                 required
-                 #cp="ngModel"
+                 name="cp"                 
                  formControlName="cp">
-          <p class="alert alert-danger" *ngIf="cp.invalid && cp.touched">
+          <p class="alert alert-danger">
             El campo Código Postal es obligatorio.
           </p>
         </div>
         <div class="form-group">
-          <label>Password</label>
+          <label for="password">Password</label>
           <label>Localidad</label>
            <i class="fa fa-check-circle check" 
-               *ngIf="password.valid"></i>
+               ></i>
           <i class="fa fa-exclamation-circle uncheck"
-               *ngIf="password.invalid && password.touched"></i>
+               ></i>
           <input type="text" 
                  class="form-control"
                  id="password" 
-                 name="password"
-                 ngModel
-                 required
-                 #password="ngModel"
+                 name="password"                
                  formControlName="password">
-          <p class="alert alert-danger" *ngIf="password.invalid && password.touched">
+          <p class="alert alert-danger" >
             El campo password es obligatorio.
           </p>
         </div>
