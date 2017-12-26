@@ -4,9 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
 
+
+// servicios
+import { PersonasService } from './servicios/personas.service';
+import {AutenticacionService} from './servicios/autenticacion.service';
+
+// components
 import {AddPersonaComponent} from './personas/add-persona/add-persona.component';
 import { RegistroComponent } from './autenticacion/registro/registro.component';
 import { LoginComponent } from './inicio/login/login.component';
@@ -69,7 +74,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PersonasService,
+              AutenticacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
