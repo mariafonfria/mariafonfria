@@ -1,13 +1,28 @@
-<app-nav-tareas></app-nav-tareas>
-    <div class="incontainer">
-        <input type="text" class="form-control" ngModel name="name" placeholder="Nombre de la tarea">
-    <br>
-    <textarea cols="30" rows="10" class="form-control" ngModel name="description" placeholder="Descripción"></textarea>
-    <br>
-    <select class="form-control" NgModel name="mode" id="">
-      <option value="">Elige la visibilidad</option>
-      <option value="visible">Visible</option>
-      <option value="invisible">Invisible</option>
-    </select>
-        <button ng-click="modifyTask()" class="btn btn-primary">Crear Tarea</button>
-    </div>
+
+    <app-nav-tareas></app-nav-tareas>
+    <form [formGroup]="presupuestoForm" (ngSubmit)="onSubmit()"><!-- (ngSubmit)="onSubmit()" -->
+        <div class="incontainer">
+            <label for="nombre" >Especifique el nombre d ela tarea</label>
+            <input type="text" class="form-control" formControlName="nombre" id="nombre" ngModel name="name" placeholder="Nombre de la tarea">
+        <br>
+        <label for="descripcion" >Describe la tarea</label>
+        <textarea cols="30" rows="10" id ="descripcion" formControlName="descripcion" class="form-control" ngModel name="description" placeholder="Descripción"></textarea>
+        <br>
+        <label for="visible" >Elige visibilidad</label>
+        <select class="form-control" NgModel name="mode" formControlName="visible" id="visible">
+          <option value="">Elige la visibilidad</option>
+          <option value="visible">Visible</option>
+          <option value="invisible">Invisible</option>
+        </select>
+            <button type="submit"   class="btn btn-primary">Crear Tarea</button><!-- (click)="onSubmit()" -->
+        </div>
+    </form>
+    <pre>
+        valor form: {{ presupuestoForm.value | json}} 
+    </pre>
+    <pre>
+        estado form: {{ presupuestoForm.status | json}} 
+    </pre>
+    <pre>
+        valor objeto: {{ presupuesto | json}} 
+    </pre>

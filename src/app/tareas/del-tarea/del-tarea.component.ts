@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PresupuestoService } from '../../servicios/presupuesto.service';
 
 @Component({
   selector: 'app-del-tarea',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DelTareaComponent implements OnInit {
 
-  constructor() { }
+  presupuestos: any[] = [];
+
+
+  constructor( private presupuestoService: PresupuestoService ) { 
+    this.presupuestoService.getPresupuestos()
+      .subscribe( presupuestos => {
+        for(const id$ in presupuestos ){
+          const p = presupuestos[id$];
+          p.id$ = id$;
+          this.presupuestos.push(presupuestos[id$]);
+        }
+      })
+  }
 
   ngOnInit() {
   }

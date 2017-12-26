@@ -1,3 +1,4 @@
+
 <app-nav-tareas></app-nav-tareas>
 <div class="container table-responsive">
   <table class=" table table-bordered table-striped">
@@ -9,9 +10,12 @@
       </tr>
     </thead>
     <tbody>
-      <td>Send Email</td>
-      <td>Sends an email with voice command: Send email to [User] [Subject] [Content]</td>
-      <td>Delete</td>
+      <tr *ngFor="let presupuesto of presupuestos">
+        <td>{{ presupuesto.nombre }}</td>
+        <td>{{ presupuesto.descripcion }}</td>
+        <td>{{ presupuesto.visible }}</td>
+        <td><button >BORRAR</button></td>
+      </tr>
     </tbody>
   </table>
 </div>

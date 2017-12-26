@@ -24,6 +24,7 @@ import { GlobalNavBarComponent } from './global-nav-bar/global-nav-bar.component
 
 import { NavPersonaComponent } from './personas/nav-persona/nav-persona.component';
 import { NavTareasComponent } from './tareas/nav-tareas/nav-tareas.component';
+import { PresupuestoService } from './servicios/presupuesto.service';
 
 
 
@@ -69,7 +70,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ PresupuestoService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
